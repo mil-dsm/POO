@@ -4,27 +4,21 @@ import java.util.Scanner;
 
 public class Exec {
     public static void main(String args[]) {
-
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno();
-		
 		Scanner entrada = new Scanner(System.in);
 		Scanner entradaLinha = new Scanner(System.in);
-		
 		a1.nota = entrada.nextFloat();
 		a1.nome = entradaLinha.nextLine();
-
 		a2.nota = entrada.nextFloat();
 		a2.nome = entradaLinha.nextLine();
-		
-		
 		a1.avaliarAluno();
 		a2.avaliarAluno();
-		
 		entrada.close();
 		entradaLinha.close();
+	}
 
-		/*public static void main(String args[]) {
+	/*public static void main(String args[]) {
 
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno();
@@ -44,6 +38,5 @@ public class Exec {
 		
 		entrada.close();
 		entradaLinha.close();
-		}*/
-	}
+	}*/
 }

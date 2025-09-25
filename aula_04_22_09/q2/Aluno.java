@@ -3,7 +3,6 @@ package POO.aula_04_22_09.q2;
 public class Aluno {
 	String nome;
 	Float nota;
-
 	public void avaliarAluno() {
 		if(nota >= 6)
 			System.out.println("Aprovado.\n");

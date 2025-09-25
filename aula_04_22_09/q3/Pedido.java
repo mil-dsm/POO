@@ -21,7 +21,6 @@ public class Pedido {
 	}
 }
 
-//Resposta (professor):
 /*public class Exec {
 
 	public static void main(String[] args) {

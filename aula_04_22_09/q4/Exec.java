@@ -33,7 +33,6 @@ public class Exec {
 	
 }
 
-//Resposta (professor):
 /*public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		Scanner entradaLinha = new Scanner(System.in);

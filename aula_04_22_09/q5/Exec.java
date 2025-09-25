@@ -27,7 +27,7 @@ public class Exec {
 		entrada.close();
 	}
 }
-//Resposta (professor):
+
 /*public static void main(String[] args) {
 		ContaBancaria c = new ContaBancaria();
 		int saida = 0;
@@ -48,5 +48,4 @@ public class Exec {
 				System.out.println("Erro ao sacar");
 			saida = entrada.nextInt();
 		}while(saida != 1);
-		
 }*/
