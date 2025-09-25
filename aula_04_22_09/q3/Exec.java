@@ -1,4 +1,4 @@
-package POO.aula_04_22_09_questao_03;
+package POO.aula_04_22_09.q3;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Exec {
 		int pedidosEntregues = 0;
 		while(true) {
 			Pedido p = new Pedido();
-			System.out.println("Digite o valor do pedido: ");
+			System.out.println("Digite o valor dos status do pedido: ");
 			p.valor = entrada.nextInt();
 			System.out.println("\n");
 			p.exibirStatus(p);
@@ -32,3 +32,39 @@ public class Exec {
 		entradaFlag.close();
 	}
 }
+
+//Resposta (professor):
+/*public class Exec {
+
+	public static void main(String[] args) {
+		int qtdPreparacao = 0;
+		int qtdTransporte = 0;
+		int qtdEntregues = 0;
+		int sair;
+		
+		Scanner entrada = new Scanner(System.in);
+		//Scanner entradaLinha = new Scanner(System.in);
+		do {
+			Pedido p = new Pedido();
+			p.valor = entrada.nextFloat();
+			p.status = entrada.nextInt();
+			
+			if(p.status == 1) {
+				qtdPreparacao++;
+			}else {
+				if(p.status == 2) {
+					qtdTransporte++;
+				}else {
+					if(p.status == 3)
+						qtdEntregues++;
+				}
+			}
+			
+			sair = entrada.nextInt();
+		}while(sair != 1);
+		
+		System.out.println(qtdPreparacao + " " + qtdTransporte + " " + qtdEntregues);
+
+	}
+
+}*/

@@ -1,4 +1,4 @@
-package POO.aula_04_22_09_questao_05;
+package POO.aula_04_22_09.q5;
 
 import java.util.Scanner;
 
@@ -27,4 +27,26 @@ public class Exec {
 		entrada.close();
 	}
 }
-//Erro na leitura de números com vírgula
+//Resposta (professor):
+/*public static void main(String[] args) {
+		ContaBancaria c = new ContaBancaria();
+		int saida = 0;
+		float valorSaque;
+		
+		Scanner entrada = new Scanner(System.in);
+		Scanner entradaLinha = new Scanner(System.in);
+		
+		
+		c.titular = entradaLinha.nextLine();
+		c.saldo = entrada.nextFloat();		
+		
+		do {
+			valorSaque = entrada.nextFloat();
+			if(c.saldo >= valorSaque)
+				c.saque(valorSaque);
+			else
+				System.out.println("Erro ao sacar");
+			saida = entrada.nextInt();
+		}while(saida != 1);
+		
+}*/
