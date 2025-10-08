@@ -85,7 +85,7 @@ public class Exec {
 }
 */
 
-package POO.questoes_aula_06.Toalha;
+package POO.questoes_aula_06_06_10.Toalha;
 
 import java.util.Scanner;
 

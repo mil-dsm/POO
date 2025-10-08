@@ -1,4 +1,4 @@
-package POO.questoes_aula_06.Toalha;
+package POO.questoes_aula_06_06_10.Toalha;
 
 public class Toalha {
     String cor;

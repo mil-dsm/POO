@@ -24,7 +24,7 @@ public class Exec {
     }
 } */
 
-package POO.questoes_aula_06.Lampada;
+package POO.questoes_aula_06_06_10.Lampada;
 
 public class Exec {
     public static void main(String args[]) {

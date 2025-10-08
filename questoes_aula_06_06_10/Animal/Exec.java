@@ -107,7 +107,7 @@ RIP
 $end
 */
 
-package POO.questoes_aula_06.Animal;
+package POO.questoes_aula_06_06_10.Animal;
 
 import java.util.Scanner;
 

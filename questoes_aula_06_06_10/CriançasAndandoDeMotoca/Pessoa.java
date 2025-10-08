@@ -1,4 +1,4 @@
-package POO.questoes_aula_06.CriançasAndandoDeMotoca;
+package POO.questoes_aula_06_06_10.CriançasAndandoDeMotoca;
 
 public class Pessoa {
     int age;

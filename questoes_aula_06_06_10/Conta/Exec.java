@@ -103,7 +103,7 @@ $end
 <<<<<<<< FINISH
 */
 
-package POO.questoes_aula_06.Conta;
+package POO.questoes_aula_06_06_10.Conta;
 
 import java.util.Scanner;
 

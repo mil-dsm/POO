@@ -1,4 +1,4 @@
-package POO.questoes_aula_06.Conta;
+package POO.questoes_aula_06_06_10.Conta;
 
 public class ContaBancaria {
     Correntista correntista;
