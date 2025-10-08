@@ -12,19 +12,30 @@ public class Carro {
     }
 
     public boolean alugar(Pessoa locatario) {
+        // Maior de idade
         if(this.disponivel && locatario.getIdade() >= 18){
+
+            // Aluguel realizado
             this.disponivel = false;
             this.locatario = locatario;
+
+            // Contabilizando aluguel
             Locadora.registrarAluguel();
-            return true;
+            // Outra forma:
+            // Locadora l = new Locadora();
+            // l.registrarAluguel();
+            return (true);
         }
         return false;
     }
 
     public boolean devolver() {
+        // Verificando se o carro está alugado
         if(!this.disponivel) {
             this.disponivel = true;
             this.locatario = null;
+
+            // Integração com a classe estática
             Locadora.registrarDevolucao();
             return true;
         }

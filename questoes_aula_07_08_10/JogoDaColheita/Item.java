@@ -10,14 +10,14 @@ public class Item {
     }
     
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public int getValorVenda() {
-        return this.valorVenda;
+        return valorVenda;
     }
 
     public String toString() {
-        return this.nome + ":" + this.valorVenda;
+        return nome + ":" + valorVenda;
     }
 }
