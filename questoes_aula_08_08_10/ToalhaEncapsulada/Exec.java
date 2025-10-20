@@ -32,7 +32,7 @@ $end
 $end
 <<<<<<<< FINISH */
 
-package POO.questoes_aula_08_08_10.Toalha;
+package POO.questoes_aula_08_08_10.ToalhaEncapsulada;
 
 import java.util.Scanner;
 

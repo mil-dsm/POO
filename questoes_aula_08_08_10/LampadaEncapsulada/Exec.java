@@ -15,7 +15,7 @@ true
 2
 <<<<<<<< FINISH */
 
-package POO.questoes_aula_08_08_10.Lampada;
+package POO.questoes_aula_08_08_10.LampadaEncapsulada;
 
 public class Exec {
     public static void main(String[] args) {

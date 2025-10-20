@@ -1,4 +1,4 @@
-package POO.questoes_aula_08_08_10.Lampada;
+package POO.questoes_aula_08_08_10.LampadaEncapsulada;
 
 public class Lampada {
     private boolean ligada = false;
