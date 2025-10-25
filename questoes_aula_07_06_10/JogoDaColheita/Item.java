@@ -1,4 +1,4 @@
-package POO.questoes_aula_07_08_10.JogoDaColheita;
+package POO.questoes_aula_07_06_10.JogoDaColheita;
 
 public class Item {
     String nome;

@@ -141,7 +141,7 @@ $end
 $end
 <<<<<<<< FINISH */
 
-package POO.questoes_aula_07_08_10.AluguelDeCarros;
+package POO.questoes_aula_07_06_10.AluguelDeCarros;
 
 import java.util.Scanner;
 

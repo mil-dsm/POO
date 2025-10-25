@@ -1,4 +1,4 @@
-package POO.questoes_aula_07_08_10.AluguelDeCarros;
+package POO.questoes_aula_07_06_10.AluguelDeCarros;
 
 public class Carro {
     String placa;
