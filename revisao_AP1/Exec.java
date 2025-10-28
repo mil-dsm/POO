@@ -1,61 +1,102 @@
-package POO.revisao_AP1;
-
-import java.util.Scanner; 
+package POO.Revisao_AP1;
+import java.util.Scanner;
 
 public class Exec {
-	public static void main(String args[]) {
-		Scanner entrada = new Scanner(System.in);
-		Scanner entradaTexto = new Scanner(System.in);
-		Produtos p = new Produtos();
-		Cliente cliente = new Cliente();
-		Mercantil m = new Mercantil();
-		while(true) {
-			System.out.println("1 - Cadastrar Produtos\n2 - Cadastrar Clientes\n3 - Criação de Mercantil\n4 - Compra\n5 - Venda\n0 - Sair");
-            int num = entrada.nextInt();
-            if (num == 0) { // Opção de saída
-                break;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        Mercantil mercantil = null;
+        Cliente cliente = null;
+        Produto p1 = null;
+        Produto p2 = null;
+        Produto p3 = null;
+        Produto p4 = null;
+        Produto p5 = null;
+
+        int opcao = -1;
+
+        while (opcao != 0) {
+            
+            System.out.println("\n--- Menu ---");
+            System.out.println("1 - Cadastrar 5 produtos");
+            System.out.println("2 - Cadastrar cliente");
+            System.out.println("3 - Criar mercantil");
+            System.out.println("4 - Mercantil comprar os 5 produtos");
+            System.out.println("5 - Mercantil vender (Produto 1) para cliente");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opcao: ");
+
+            opcao = scanner.nextInt();
+
+            switch(opcao) {
+                case 1:
+                    System.out.println("Cadastro de 5 produtos (nome valor data):");
+                    System.out.print("Produto 1: ");
+                    p1 = new Produto(scanner.next(), scanner.nextDouble(), scanner.next());
+                    System.out.print("Produto 2: ");
+                    p2 = new Produto(scanner.next(), scanner.nextDouble(), scanner.next());
+                    System.out.print("Produto 3: ");
+                    p3 = new Produto(scanner.next(), scanner.nextDouble(), scanner.next());
+                    System.out.print("Produto 4: ");
+                    p4 = new Produto(scanner.next(), scanner.nextDouble(), scanner.next());
+                    System.out.print("Produto 5: ");
+                    p5 = new Produto(scanner.next(), scanner.nextDouble(), scanner.next());
+                    System.out.println("5 Produtos cadastrados.");
+                    break;
+                case 2:
+                    System.out.println("Cadastro de cliente (nome dinheiro):");
+                    cliente = new Cliente(scanner.next(), scanner.nextDouble());
+                    System.out.println("Cliente cadastrado.");
+                    break;
+                case 3:
+                    System.out.println("Criar mercantil:");
+                    mercantil = new Mercantil();
+                    System.out.println("Mercantil criado.");
+                    break;
+                case 4:
+                    System.out.println("Mercantil comprando produtos...");
+                    // Lembrem-se de checar se o 'mercantil' e os 5 produtos estao instanciados antes de usar essa opcao, na prova coloquem os if necessarios pra isso
+                    if (mercantil == null) {
+                        System.out.println("Erro: mercantil ainda não foi criada.");
+                        break;
+                    }
+                    if(p1 == null || p2 == null || p3 == null || p4 == null || p5 == null){
+                        System.out.println("Erro: falta cadastrar algum produto.");
+                        break;
+                    }
+                    // Usando os metodos de compra da classe Mercantil
+                    mercantil.compra(p1, p2, p3); // Usa a sobrecarga para 3
+                    mercantil.compra(p4);         // Usa a normal, mas vc poderia substituir esses 2 ultimos por mercantil.compra(p4, p5);
+                    mercantil.compra(p5);     
+
+                    System.out.println("Produtos comprados!");
+                    System.out.println(mercantil.toString()); 
+                    break;
+                case 5:
+                    System.out.println("Vender Produto 1 para o cliente...");
+                    // Lembrem-se de checar se 'mercantil', 'p1' e 'cliente' 
+                    // estao instanciados antes de usar essa opcao!
+                    if(mercantil == null || p1 == null || cliente == null){
+                        System.out.println("Erro: algo não está instanciado");
+                        break;
+                    }
+                    boolean vendeu = mercantil.venda(p1, cliente);
+                    if (vendeu) {
+                        System.out.println("Venda de '" + p1.nome + "' realizada!");
+                        System.out.println("Dinheiro restante do cliente: " + cliente.getDinheiro());
+                    } else {
+                        System.out.println("Venda falhou. (Cliente sem dinheiro?)");
+                    }
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opcao invalida.");
+                    break;
             }
-			// Cadastrar produtos
-			if(num == 1) {
-				System.out.println("Digite nome, valor e data de validade:");
-				String nomeProduto = entradaTexto.nextLine();
-				p.setNome(nomeProduto);
-				p.valor = entrada.nextFloat();
-				p.dataValidade = entradaTexto.nextLine();
-			}
-			// Cadastrar clientes
-			if(num == 2) {
-				System.out.println("Digite nome e dinheiro:");
-				String nomeCliente = entradaTexto.nextLine();
-				cliente.setNome(nomeCliente);
-				cliente.dinheiro = entrada.nextFloat();
-			}
-			// Criação de mercantil
-			if(num == 3) {
-				System.out.println("Digite o código promocional:");
-                int codigo = entrada.nextInt();
-				Mercantil.setCodigo(codigo); // Manipulação do método estático
-			}
-			// Compra de produtos
-			if(num == 4) {
-				if(p != null) {
-					m.comprar(p);
-					System.out.println("Sucesso ao comprar o produto.");
-				} else {
-					System.out.println("Erro ao comprar o produto.");
-				}
-			}
-			// Venda de produtos
-			if(num == 5) {
-				if(p != null && cliente != null) {
-					m.vender(p, cliente);
-					System.out.println("Sucesso ao comprar o produto.");
-				} else {
-					System.out.println("Erro ao vender o produto.");
-				}
-			}
-			entrada.close();
-		    entradaTexto.close();
-		}
-	}
+        }
+        
+        scanner.close();
+    }
 }
