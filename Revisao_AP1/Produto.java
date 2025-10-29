@@ -3,6 +3,7 @@ package POO.Revisao_AP1;
 public class Produto {
     public String nome;
     private double valor;
+    protected String dataValidade;
 
     public Produto(){
         this.nome = null;
