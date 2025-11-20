@@ -6,7 +6,6 @@ public class Exec {
     public static void main(String args[]) {
         Scanner entrada = new Scanner(System.in);
         ContaBancaria conta = new ContaBancaria(); 
-        String opc = "";
 
         String nome = entrada.nextLine();
         String cpf = entrada.nextLine();

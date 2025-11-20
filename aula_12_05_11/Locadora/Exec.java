@@ -25,6 +25,7 @@ public class Exec {
         manager.listarVeiculos();
 
         System.out.println("\n--- TESTE ALUGUEL MOTO (JET-3333) ---");
+        System.out.println("Alugar Ana (17): " + manager.alugarVeiculo("JET-3333", nome_jovem, idade_jovem)); // Falha moto (18)
         System.out.println("Alugar Celso (55): " + manager.alugarVeiculo("JET-3333", nome_idoso, idade_idoso)); // Falha moto (50)
         System.out.println("Alugar Beto (30): " + manager.alugarVeiculo("JET-3333", nome_ok, idade_ok)); // Sucesso
 
